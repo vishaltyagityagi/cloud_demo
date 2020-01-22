@@ -20,6 +20,7 @@
 * FetchApiDataWorker::perform_async
 
 #API
+Fetching all  data
 *  http://localhost:4000/fetch_pricing_data
 - Sample Response
 
@@ -45,15 +46,24 @@
 ]
 
 # Example For  Filters Api
-* Availabe filter options
-description,beginRange,endRange,unit,pricePerUnit,effectiveDate,date,usd
+* Availabe filter params options
+
+* description,
+beginRange,
+endRange,
+unit,
+pricePerUnit,
+effectiveDate,
+date,
+usd
 
 * http://localhost:4000/fetch_pricing_data?description= $6.0E-7  per Request for Lambda-Edge-Request in EU (Paris)
 * http://localhost:4000/fetch_pricing_data?unit=Request
 * http://localhost:4000/fetch_pricing_data?unit=Request&pricePerUnit=0.0000006000&description=$6.0E-7  per Request for Lambda-Edge-Request in EU (Paris)
 * http://localhost:4000/fetch_pricing_data?endRange=Inf
 * http://localhost:4000/fetch_pricing_data?beginRange=0
-* http://localhost:4000/fetch_pricing_data?usd=0.0850000000 && http://localhost:4000/fetch_pricing_data?pricePerUnit=0.0850000000  will Work same as alise 
+* http://localhost:4000/fetch_pricing_data?usd=0.0850000000 && http://localhost:4000/fetch_pricing_data?pricePerUnit=0.0850000000  (will Work same as alise)
+* http://localhost:4000/fetch_pricing_data?beginRange=51200&endRange=153600    (FOR Pricing range) 
 
 
 * Sample Output
